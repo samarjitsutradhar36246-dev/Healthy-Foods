@@ -1,0 +1,9 @@
+.list{
+    border:3px solid black;
+}
+.buttons{
+    float:right;
+   height:30px;
+   display: flex;
+  align-items: center;
+}

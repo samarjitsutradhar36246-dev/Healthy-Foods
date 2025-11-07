@@ -1,7 +1,7 @@
 import "./list.css";
-const Item = ({ items, handlebuybutton }) => {
+const Item = ({ items, bought, handlebuybutton }) => {
   return (
-    <li className="list-group-item list">
+    <li className={`list-group-item  list ${bought && "active"}`}>
       {items}
       <button
         type="button"

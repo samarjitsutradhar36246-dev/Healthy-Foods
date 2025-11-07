@@ -1,9 +1,15 @@
 .list{
     border:3px solid black;
+      font-family: cursive;
+      font-weight: 100;
+      font-size: 15px;
+      
 }
 .buttons{
     float:right;
    height:30px;
    display: flex;
   align-items: center;
+  font-size: 15px;
+
 }

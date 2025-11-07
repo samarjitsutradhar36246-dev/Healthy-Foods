@@ -5,6 +5,7 @@ import Container from "./Container";
 import Heading from "./Heading";
 import FoodInput from "./FoodInput";
 import { useState } from "react";
+import "./App.css";
 function App() {
   const [foodItems, setFoodItems] = useState([]);
   // // let foodItems = [];

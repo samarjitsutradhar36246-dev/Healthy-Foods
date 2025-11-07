@@ -1,16 +1,12 @@
 import "./list.css";
-const Item = ({ items }) => {
-  const HandleBuyButton = (event) => {
-    console.log(`${items} is bought`);
-    console.log(event);
-  };
+const Item = ({ items, handlebuybutton }) => {
   return (
     <li className="list-group-item list">
       {items}
       <button
         type="button"
         className="btn btn-info buttons"
-        onClick={(event) => HandleBuyButton(event)}
+        onClick={handlebuybutton}
       >
         Buy
       </button>

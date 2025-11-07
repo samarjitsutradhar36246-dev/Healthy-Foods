@@ -4,15 +4,25 @@ import ErrorMessege from "./ErrorMessege";
 import Container from "./Container";
 import Heading from "./Heading";
 import FoodInput from "./FoodInput";
+import { useState } from "react";
 function App() {
-  let foodItems = ["Salad", "Paneer", "Dal", "Fruits", "Curd"];
+  const [foodItems, setFoodItems] = useState([]);
   // // let foodItems = [];
 
+  const onkeydown = (event) => {
+    if (event.key === "Enter") {
+      let newfooditem = event.target.value;
+      event.target.value = "";
+      let newItems = [...foodItems, newfooditem];
+      setFoodItems(newItems);
+    }
+  };
   return (
     <Container>
       <Heading />
-      <FoodInput />
+      <FoodInput onkeydown={onkeydown} />
       <ErrorMessege fooditems={foodItems} />
+
       <FoodItems fooditems={foodItems} />
     </Container>
   );

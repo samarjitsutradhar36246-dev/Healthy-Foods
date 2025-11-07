@@ -1,14 +1,11 @@
 import "./input.css";
-const FoodInput = () => {
-  const handleonchange = (event) => {
-    console.log(event.target.value);
-  };
+const FoodInput = ({ onkeydown }) => {
   return (
     <input
       className="Inputs"
       type="text"
       placeholder="Enter items to be entered"
-      onChange={handleonchange}
+      onKeyDown={onkeydown}
     />
   );
 };
